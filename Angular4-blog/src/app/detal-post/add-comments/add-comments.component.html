@@ -1,0 +1,30 @@
+<div>
+  <h3>Оставить комментарий</h3>
+  <form [formGroup]="form" (ngSubmit)=" addComments()">
+    <div class="form-group"
+         [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}"
+    >
+      <label class="control-label" for="e-name">Ваше имя</label>
+      <input type="text" id="e-name" class="form-control"
+             placeholder="Чебурек"
+             formControlName="name"
+      >
+      <span class="form-text text-danger"
+            *ngIf="form.get('name').invalid && form.get('name').touched"
+      >Поле не может быть пустым</span>
+    </div>
+    <div class="form-group"
+         [ngClass]="{'has-error': form.get('body').invalid && form.get('body').touched}"
+    >
+      <label class="control-label" for="e-body">Комментарий</label>
+      <textarea class="form-control" id="e-body" cols="30" rows="10"
+                placeholder="Поле для творчества"
+                formControlName="body"
+      ></textarea>
+      <span class="form-text text-danger"
+            *ngIf="form.get('body').invalid && form.get('body').touched"
+      >Поле не может быть пустым</span>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="form.invalid">Отправить</button>
+  </form>
+</div>

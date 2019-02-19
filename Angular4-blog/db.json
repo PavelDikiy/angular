@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.ua",
+      "password": "121212",
+      "name": "Админ"
+    },
+    {
+      "email": "sda@ds",
+      "password": "232323",
+      "name": "name",
+      "id": 2
+    },
+    {
+      "email": "test@test.ua2",
+      "password": "121212",
+      "name": "121212",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "name": "post 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?",
+      "id": 1
+    },
+    {
+      "name": "post 2",
+      "description": "description description",
+      "id": 2
+    },
+    {
+      "name": "post 3",
+      "description": "description description 3",
+      "id": 3
+    },
+    {
+      "name": "Новій пост",
+      "description": "Новій постНовій постНовій постНовій постНовій постНовій постНовій постНовій постНовій постНовій пост",
+      "id": 4
+    },
+    {
+      "name": "ffgfgfg",
+      "description": "df  adsfsd fdsfds ds ",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "Миша",
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "name": "Sasha",
+      "body": "some comment2",
+      "postId": 2
+    },
+    {
+      "name": "CD",
+      "body": "d asdasd asd as dasd sad asd AS",
+      "postId": 1,
+      "id": 3
+    },
+    {
+      "name": "мммммммммммммм",
+      "body": "вчсмчм віавіавіа  віавіав ",
+      "postId": 1,
+      "id": 4
+    },
+    {
+      "name": "11111111111111",
+      "body": "m dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducim",
+      "postId": 1,
+      "id": 5
+    },
+    {
+      "name": "qqqqqqqqqqqqqq",
+      "body": "d asd sD ASD das ",
+      "postId": 1,
+      "id": 6
+    }
+  ]
+}

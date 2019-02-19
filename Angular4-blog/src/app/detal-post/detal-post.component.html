@@ -1,0 +1,9 @@
+<a [routerLink]="'/posts'">Вернуться к постам</a>
+<hr>
+<h1>{{name}}</h1>
+<div class="bd-example"><p class="lead">{{descript}}</p></div>
+<hr>
+<app-add-comments [postIdpost1]="id" (onAddCom)="addCom($event)"></app-add-comments>
+<hr>
+<app-list-comments *ngFor="let comment of comments | async" [comment]="comment" [postIdpost]="id"></app-list-comments>
+

@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+<!--  <nav class="docs-navbar-header">
+    <div>
+      <ul>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/" class="mat-button"><span class="mat-button-wrapper">Главная</span></a></li>
+        <li routerLinkActive="active"><a routerLink="/weather_now" class="mat-button"><span class="mat-button-wrapper">Какая погодка у нас?</span></a></li>
+      </ul>
+    </div>
+  </nav>-->
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+<!--
+      <a routerLink="/" class="mat-button"><span class="mat-button-wrapper">Главная</span><span class="example-spacer"></span></a>
+      <a routerLink="/weather_now" class="mat-button"><span class="mat-button-wrapper">Какая погодка у нас?</span><span class="example-spacer"></span></a>
+-->
+
+      <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Главная</button>
+      <button mat-button routerLink="/weather" routerLinkActive="active">Какая погодка в Киеве?</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div id="content_all" class="row">
+    <mat-card>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+    </mat-card>
+  </div>
+</div>
+

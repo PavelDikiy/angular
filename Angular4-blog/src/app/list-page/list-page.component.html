@@ -1,0 +1,15 @@
+<h1>Блог</h1>
+<hr>
+<div class="row">
+    <div *ngFor="let post of posts | async" class="col-sm-6 item-l">
+<!--      <a [routerLink]="['/posts/', post.id]"><h2>{{post.name}}</h2>
+        <p>{{post.description}}</p></a>-->
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title h3">{{post.name}}</p>
+          <p class="card-text">{{post.description.substring(0, 80)}}</p>
+          <a [routerLink]="['/posts/', post.id]" class="btn btn-primary">Перейти</a>
+        </div>
+      </div>
+    </div>
+</div>

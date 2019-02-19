@@ -1,0 +1,7 @@
+<div *ngIf="comment.postId === postIdpost" class="card bg-light"> <!--*ngFor="let comment of comments | async"    -->
+  <div class="card-header">{{comment.name}}</div>
+  <div class="card-body">
+
+    <p class="card-text">{{comment.body}}</p>
+  </div>
+</div>

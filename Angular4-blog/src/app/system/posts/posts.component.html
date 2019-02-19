@@ -1,0 +1,70 @@
+<div class="row justify-content-between">
+
+  <div class="col-sm-6"><h2>Список существующих постов</h2>
+    <!--  <ul>
+        <li *ngFor="let post of posts | async" [ngSwitch]="post.id">
+          <div><h2>{{post.name}}</h2>
+            <p>{{post.description.substring(0, 150)}}</p>
+            <button class="btn btn-danger" (click)="deletePosts(post.id)">Удалить</button>
+            <button class="btn btn-primary" (click)="isVisi(post.id)">Редактировать</button>
+          </div>
+          <app-edit-post [arrpost]="post" *ngSwitchCase="isVisible" (onEditPost)="editPoste($event)"></app-edit-post>
+        </li>
+      </ul>-->
+
+    <div id="accordion" role="tablist">
+      <div class="card" *ngFor="let post of posts | async" [ngSwitch]="post.id">
+        <div class="card-header" role="tab">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4 class="mb-0">
+                  {{post.name}}
+              </h4></div>
+            <div class="col-sm-6 text-right">
+              <button class="btn btn-danger" (click)="deletePosts(post.id)">Удалить</button>
+              <button class="btn btn-primary" (click)="isVisi(post.id)">Редактировать</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse show" role="tabpanel" data-parent="#accordion" *ngSwitchCase="isVisible">
+          <div class="card-body">
+            <app-edit-post [arrpost]="post" *ngSwitchCase="isVisible" (onEditPost)="editPoste($event)"></app-edit-post>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="col-sm-5"><h2>Добавляем пост</h2>
+    <form [formGroup]="form" (ngSubmit)="addPosts()">
+      <div class="form-group"
+           [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}"
+      >
+        <label class="control-label" for="name">Заголовок статьи</label>
+        <input type="text" id="name" class="form-control"
+               placeholder="Новая статья"
+               formControlName="name"
+        >
+        <span class="form-text text-danger"
+              *ngIf="form.get('name').invalid && form.get('name').touched"
+        >Поле не может быть пустым</span>
+      </div>
+      <div class="form-group"
+           [ngClass]="{'has-error': form.get('description').invalid && form.get('description').touched}"
+      >
+        <label class="control-label" for="description">Текст статьи</label>
+        <textarea class="form-control" id="description" cols="30" rows="10"
+                  placeholder="Описание к новой статьи"
+                  formControlName="description"
+        ></textarea>
+        <span class="form-text text-danger"
+              *ngIf="form.get('description').invalid && form.get('description').touched"
+        >Поле не может быть пустым</span>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="form.invalid">Добавить</button>
+    </form>
+  </div>
+</div>

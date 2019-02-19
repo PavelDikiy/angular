@@ -1,0 +1,64 @@
+
+
+<mat-tab-group>
+  <mat-tab label="Вариант 1">
+    <div id="var1" class="m50">
+      <div class="counter-hb-heading">
+        <div class="image_icon"><img class="iconweather" src="{{icon_url_svg}}"></div>
+        <div class="text_weather">
+          <div class="temper">{{temperatur}}<sup>°C</sup></div>
+          <div class="detal_text"><span>{{name_city}}</span>
+            <div><span>{{main}}</span> - <span>{{description}}</span></div>
+            <div><span>clouds: {{clouds}}%</span></div>
+          </div>
+          <button (click)="refresh()">Обновить</button>
+          <p *ngIf="statusw" class="alert"><span>Данные обновлены</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </mat-tab>
+  <mat-tab label="Вариант 2">
+    <div id="var2" class="m50">
+      <div>
+        <mat-card>
+            <mat-toolbar>
+              <span>{{name_city}}</span>
+            </mat-toolbar>
+          <mat-card-title>
+            <mat-grid-list cols="2" >
+              <mat-grid-tile>
+                <mat-list>
+                  <mat-list-item role="listitem"><span>main: {{main}}</span> - </mat-list-item>
+                  <mat-list-item role="listitem"> <span>description: {{description}}</span></mat-list-item>
+                  <mat-list-item role="listitem"><span>clouds: {{clouds}}%</span>
+                  </mat-list-item>
+                </mat-list>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <mat-list>
+                  <mat-list-item><img mat-card-image src="{{icon_url_png}}" alt=""></mat-list-item>
+                  <mat-list-item><div class="temper"><span>Температура: {{temperatur}}<sup>°C</sup></span></div></mat-list-item>
+                </mat-list>
+
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-title>
+          <button mat-raised-button (click)="refresh()">Обновить данные</button>
+          <p *ngIf="statusw" class="alert"><span>Данные обновлены</span>
+          </p>
+        </mat-card>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+
+
+<!--name_city {{ name_city }} <br/>
+icon_url {{ icon_url }} <br/>
+description {{ description }} <br/>
+main {{ main }} <br/>
+clouds {{ clouds }} <br/>
+temperatur {{ temperatur }} <br/>-->

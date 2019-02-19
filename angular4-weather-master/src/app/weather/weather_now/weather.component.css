@@ -1,0 +1,135 @@
+#var1 .counter-hb-heading {
+  display: table;
+  width: 100%;
+  max-width: 240px;
+  margin: 0px auto;
+  position: relative;
+  background-color: #1b1b1b;
+  color: #fff;
+  border-radius: 4px;
+}
+
+#var1 .image_icon img {
+  width: 86px;
+  margin: 15px auto;
+  display: table;
+}
+
+#var1 .text_weather {
+  text-align: center;
+  margin: 15px 0;
+}
+
+#var1 .text_weather > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#var1 .text_weather .temper {
+  font-size: 170%;
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#var1 .text_weather .temper sup {
+  display: inline-block;
+  font-size: 50%;
+  position: relative;
+  margin-left: 2px;
+}
+
+#var1 .text_weather .temper:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  border-right: 1px solid;
+  position: absolute;
+  right: 7px;
+}
+
+#var1 .iconweather {
+  filter: invert(1);
+  -webkit-filter: invert(1);
+}
+
+#var1 .text_weather .detal_text > div {
+  font-size: 66%;
+  margin-top: 5px;
+}
+
+#var1 button {
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  margin-bottom: .3125rem;
+  font-size: .875rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  background-color: inherit;
+  padding: .46875rem 1rem;
+  border-radius: .125rem;
+  background: #222;
+  color: #fff;
+}
+
+#var1 button:hover {
+  background: #eee;
+  color: #222;
+}
+
+.m50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#var2 {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#var2 img {
+  width: 55px;
+  height: 55px;
+  margin:0px auto;
+}
+
+.alert {
+  color: #fff;
+  width: 100%;
+
+  display: block;
+  background-color: #3f51b5;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  max-width: 300px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  font-size: 12px; text-transform: uppercase;
+  margin: 0;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 4px 4px 0px 0px;
+}
+
+#var2 .mat-raised-button{margin: 0px auto;
+  display: table;}
+
+#var2 .temper{
+  font-size: 14px;}
